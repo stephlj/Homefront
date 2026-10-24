@@ -12,6 +12,6 @@ field, a new section), since an update will need to migrate their files.
 Version numbers: the last digit for fixes and rewording, the middle for new behavior, the first
 for a change to the tracker format.
 
-## 0.1.0 - unreleased
+## 0.1.0 - 2026-10-23
 
 First public version.

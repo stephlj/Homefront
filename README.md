@@ -84,8 +84,8 @@ Setup asks what you take into account when you plan your days, and your meals, w
 examples to react to. It writes your answers as plain-language rules in `tracker/rules.md`, then
 helps you dump everything currently on your mind into the tracker.
 
-After that, ask for **"today's todos"** whenever you want to check in - first thing in the
-morning is a good habit, but it's up to you.
+After that, ask for **"today's todos"** whenever you want to check in (e.g., first thing
+in the morning).
 
 ## Making it yours
 
