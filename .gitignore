@@ -1,0 +1,7 @@
+# The list of words the safety hook blocks. It's a list of exactly what you don't want stored,
+# so it never gets committed.
+hooks/safety-words
+.DS_Store
+
+# Marks the maintainer's working copy of the published repo. Only exists there.
+MAINTAINER

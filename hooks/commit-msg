@@ -1,0 +1,2 @@
+#!/bin/sh
+grep -v '^#' "$1" | "$(dirname "$0")/safety-check" "commit message"

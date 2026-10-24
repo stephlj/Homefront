@@ -1,0 +1,3 @@
+#!/bin/sh
+# Check only lines this commit adds, so existing content doesn't block unrelated commits.
+git diff --cached -U0 --no-color | grep '^+[^+]' | "$(dirname "$0")/safety-check" "staged changes"

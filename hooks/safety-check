@@ -1,0 +1,21 @@
+#!/bin/sh
+# Shared by pre-commit and commit-msg: fail if text on stdin matches a word in safety-words.
+# safety-words is listed in .gitignore and must never be committed.
+# Words are matched literally (-F), so names with ( ) + . & work as written.
+words="$(dirname "$0")/safety-words"
+[ -f "$words" ] || exit 0
+list=$(mktemp) || exit 1
+trap 'rm -f "$list"' EXIT
+tr -d '\r' < "$words" | grep -v -e '^#' -e '^[[:space:]]*$' > "$list"
+[ -s "$list" ] || exit 0
+hits=$(grep -n -i -w -F -f "$list")
+status=$?
+if [ "$status" -eq 0 ]; then
+  echo "Safety check: $1 contains a blocked term (see hooks/safety-words):" >&2
+  echo "$hits" >&2
+  exit 1
+elif [ "$status" -ne 1 ]; then
+  echo "Safety check: couldn't check $1 (grep failed), so the commit is blocked to be safe." >&2
+  exit 1
+fi
+exit 0
