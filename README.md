@@ -72,7 +72,7 @@ The goal of Homefront is to take the mental load off you, so you can stop carryi
 1. Download this repo (green **Code** button → **Download ZIP**, then unzip), or clone it. Put the
    folder wherever you like and rename it if you want.
 2. Open the folder in Claude Code.
-3. Say **"set up homefront"**.
+3. Tell Claude: **"Verify you can see the /todays-todos and if so, set up homefront."**.
 
 **Keep your tracker local.** It's your life in plain text, and even with the privacy rules on, a
 todo list says a lot about you: what you're dealing with, when you're busy, how you live. The undo
